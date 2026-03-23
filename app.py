@@ -94,7 +94,7 @@ with col2:
                         st.write(f"Status: `{current_status}`")
                         
                         if current_status == "completed":
-                            filename = status_data.get("filename")
+                            filename = status_data.get("file")
                             finished = True
                             break
                         elif current_status == "failed":
