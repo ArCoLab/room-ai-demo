@@ -22,7 +22,7 @@ Transform empty room photos into fully furnished, photorealistic interior design
 #### 1\. Initialize Staging (POST)
 
 curl --request POST  
-\--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging](https://www.google.com/search?q=https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging)  
+\--url https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging
 \--header 'x-rapidapi-key: YOUR\_API\_KEY'  
 \--form 'image=@room.jpg'  
 \--form 'room=living\_room'  
@@ -32,13 +32,13 @@ curl --request POST
 #### 2\. Check Status (GET)
 
 curl --request GET  
-\--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK\_ID](https://www.google.com/search?q=https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK_ID)  
+\--url https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK\_ID
 \--header 'x-rapidapi-key: YOUR\_API\_KEY'
 
 #### 3\. Download Result (GET)
 
 curl --request GET  
-\--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME](https://www.google.com/search?q=https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME)  
+\--url https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME
 \--header 'x-rapidapi-key: YOUR\_API\_KEY'
 
 -----
@@ -57,4 +57,4 @@ curl --request GET
 This reference implementation is available under the MIT License.
 
 Built for the PropTech community.
-[Get API Access on RapidAPI](https://www.google.com/search?q=https://rapidapi.com/wpcoderu/api/room-ai-virtual-staging-professional-interior-design)
+[Get API Access on RapidAPI](https://rapidapi.com/wpcoderu/api/room-ai-virtual-staging-professional-interior-design)
