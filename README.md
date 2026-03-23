@@ -22,7 +22,7 @@ Transform empty room photos into fully furnished, photorealistic interior design
 #### 1\. Initialize Staging (POST)
 
 curl --request POST  
-\--url https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging'
+\--url 'https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging'
 \--header 'x-rapidapi-key: YOUR\_API\_KEY'  
 \--form 'image=@room.jpg'  
 \--form 'room=living\_room'  
@@ -32,13 +32,13 @@ curl --request POST
 #### 2\. Check Status (GET)
 
 curl --request GET  
-\--url https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK\_ID'
+\--url 'https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK\_ID'
 \--header 'x-rapidapi-key: YOUR\_API\_KEY'
 
 #### 3\. Download Result (GET)
 
 curl --request GET  
-\--url https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME'
+\--url 'https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME'
 \--header 'x-rapidapi-key: YOUR\_API\_KEY'
 
 -----
