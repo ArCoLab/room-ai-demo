@@ -1,41 +1,60 @@
 # 🏠 Room AI: Professional Virtual Staging API
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge.svg)]([YOUR_STREAMLIT_LINK])
-[![RapidAPI](https://img.shields.io/badge/RapidAPI-Connect-blue)]([YOUR_RAPIDAPI_LINK])
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-ff4b4b?style=flat&logo=streamlit)](https://room-ai-demo.streamlit.app) 
+[![RapidAPI](https://img.shields.io/badge/RapidAPI-Connect-blue)](https://rapidapi.com/wpcoderu/api/room-ai-virtual-staging-professional-interior-design)
 
 **High-performance Virtual Staging infrastructure for developers, real estate platforms, and PropTech startups.**
 
-Transform empty room photos into fully furnished, photorealistic interior designs in seconds. Unlike standard generative AI, our pipeline ensures strict geometric fidelity, preserving walls, windows, and architectural elements.
+Transform empty room photos into fully furnished, photorealistic interior designs in seconds. Powered by NVIDIA RTX 5090.
 
----
+-----
 
 ### ⚡ Powered by Enterprise Hardware
-To ensure sub-15s latency and high-resolution output, our API runs on a dedicated high-performance cluster:
-* **GPU:** NVIDIA GeForce RTX 5090 (32GB VRAM)
-* **RAM:** 128GB High-Speed Memory
-* **Architecture:** Optimized X-Decoder + ControlNet pipeline for 100% spatial accuracy.
 
----
+  * **GPU:** NVIDIA GeForce RTX 5090 (32GB VRAM)
+  * **RAM:** 128GB High-Speed Memory
+  * **Architecture:** Optimized X-Decoder + ControlNet pipeline for 100% spatial accuracy.
 
-### 🚀 Live Demo
-Don't take our word for it. Try the integration in real-time:
-👉 **[Launch Live Demo Environment]([YOUR_STREAMLIT_LINK])**
-*(Requires a RapidAPI Key)*
-
----
+-----
 
 ### 🛠️ Developer Integration (Quick Start)
 
-Our API uses a simple 3-step asynchronous workflow: **Stage -> Poll -> Download**.
+#### 1\. Initialize Staging (POST)
 
-#### 1. Initialize Staging (POST)
-Send an image as `multipart/form-data`.
+curl --request POST  
+\--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging](https://www.google.com/search?q=https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging)  
+\--header 'x-rapidapi-key: YOUR\_API\_KEY'  
+\--form 'image=@room.jpg'  
+\--form 'room=living\_room'  
+\--form 'style=industrial'  
+\--form 'furnish=true'
 
-```bash
-curl --request POST \
-	--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging](https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/staging) \
-	--header 'x-rapidapi-key: YOUR_API_KEY' \
-	--form 'image=@room.jpg' \
-	--form 'room=living_room' \
-	--form 'style=industrial' \
-	--form 'furnish=true'
+#### 2\. Check Status (GET)
+
+curl --request GET  
+\--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK\_ID](https://www.google.com/search?q=https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/status/TASK_ID)  
+\--header 'x-rapidapi-key: YOUR\_API\_KEY'
+
+#### 3\. Download Result (GET)
+
+curl --request GET  
+\--url [https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME](https://www.google.com/search?q=https://room-ai-virtual-staging-professional-interior-design.p.rapidapi.com/download/FILENAME)  
+\--header 'x-rapidapi-key: YOUR\_API\_KEY'
+
+-----
+
+### 🎨 Supported Configurations
+
+| Parameter | Options |
+| :--- | :--- |
+| **Room Types** | living\_room, bedroom, kitchen, office, bathroom, dining\_room, hallway, nursery |
+| **Styles** | modern, scandinavian, industrial, classic, boho, minimalist, art\_deco |
+
+-----
+
+### 📝 License
+
+This reference implementation is available under the MIT License.
+
+Built for the PropTech community.
+[Get API Access on RapidAPI](https://www.google.com/search?q=https://rapidapi.com/wpcoderu/api/room-ai-virtual-staging-professional-interior-design)
